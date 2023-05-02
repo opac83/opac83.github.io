@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<title>Opac</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="Opac" />
+<meta name="generator" content="VisualNEO Web (19.9.16)" />
+<meta name="date" content="2023-05-02 11:00" />
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="css/nzAnimate.min.css">
+<link rel="stylesheet" href="css/neoapp-ui.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body id="ng-app" ng-app="NeoApp" ng-cloak>
+<div ng-controller="NeoApp_CoreCtrl" ng-view ng-cloak id="ng-view" class="app-viewport[NAB._pageEffect]"></div>
+<script type="text/ng-template" id="Consulta1">
+<div id="Consulta1">
+<div id="Ficha" class="[NAB.Ficha_effect]" ng-style="NAB.Ficha_style" ng-hide="NAB.Ficha_hidden" ng-disabled="NAB.Ficha_disabled"><span ng-repeat="object in mydata | filter:searchText | orderBy: 'clase'">
+  <div class="panel-primary" style="margin-bottom:20px;">
+        <div class="panel-heading"><strong>Clasif.:</strong> [object.clase]</div>
+        <div class="panel-body" style="background:#f3f3f3;">
+             <div>
+<font size="3">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>[object.encabezado]</strong><br>
+&nbsp;&nbsp;&nbsp;[object.titulo] [object.subtit] / [object.mencion]. -- [object.edicion]. -- [object.lugar] : [object.editor], [object.fecha].<br>
+&nbsp;&nbsp;&nbsp;[object.detalles] [object.serie]<br><br>
+&nbsp;&nbsp;&nbsp;[object.notas]<br>
+&nbsp;&nbsp;&nbsp;[object.isbn]<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<p style="color:#0000FF"><b>Materias:</b><br>[object.temas]</p><br>
+</font></div>
+        </div><br><br>
+  </div></span>
+</div>
+<div id="buscador" class="[NAB.buscador_effect]" ng-style="NAB.buscador_style" ng-hide="NAB.buscador_hidden" ng-disabled="NAB.buscador_disabled"><div align="center"><br><input class="css-input" placeholder="Buscar..." type="text" ng-model="searchText">
+</div>
+</div>
+</script>
+<script type="text/ng-template" id="NewDialog">
+<div id="DialogContainer1" class="modal-dialog modal-sm"><div class="modal-content" style="height:100%">
+</div></div>
+</script>
+<script src="js/jquery.min.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/angular-touch.min.js"></script>
+<script src="js/angular-route.min.js"></script>
+<script src="js/angular-animate.min.js"></script>
+<script src="js/angular-sanitize.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/neoapp.min.js"></script>
+<script src="js/neoapp-ui.min.js"></script>
+<script src="js/sheetrock.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
